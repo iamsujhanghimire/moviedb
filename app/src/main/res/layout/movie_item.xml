@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="#CCC"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardMaxElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#FF9800"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <ImageView
+                android:id="@+id/editor_poster_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/example_movie" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="238dp"
+                android:layout_height="44dp"
+                android:layout_gravity="bottom|center"
+                android:numStars="5"
+                android:clickable="false"
+                android:isIndicator="true"
+                android:stepSize="0.5" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Doom: Annihilation"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
